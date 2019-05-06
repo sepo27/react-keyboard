@@ -1,7 +1,7 @@
 {
-  "name": "@sepo27/ts-lib",
+  "name": "@sepo27/react-keyboard",
   "version": "0.1.0",
-  "description": "Ts lib boilerplate",
+  "description": "React key binding handler",
   "main": "lib/index.js",
   "scripts": {
     "compile": "tsc -p tsconfig.json",
@@ -13,26 +13,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sepo27/ts-lib.git"
+    "url": "git+https://github.com/sepo27/react-keyboard.git"
   },
   "author": "Sergey Poskachey",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sepo27/ts-lib/issues"
+    "url": "https://github.com/sepo27/react-keyboard/issues"
   },
-  "homepage": "https://github.com/sepo27/ts-lib#readme",
+  "homepage": "https://github.com/sepo27/react-keyboard#readme",
   "devDependencies": {
     "@types/jest": "^23.3.11",
     "eslint": "^5.11.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-import": "^2.14.0",
     "husky": "^1.3.1",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.1.1",
     "typescript-eslint-parser": "^21.0.2"
-  },
-  "dependencies": {
-    "eslint-plugin-import": "^2.14.0"
   }
 }
