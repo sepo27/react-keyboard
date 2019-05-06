@@ -1,4 +1,10 @@
 {
+  "extends": "airbnb-base",
+
+  "env": {
+    "jest/globals": true
+  },
+
   "rules": {
     "max-len": ["error", { "code": 120, "ignoreComments": true }],
     "strict": "off",
@@ -12,13 +18,21 @@
     "class-methods-use-this": "off",
     "newline-per-chained-call": "off",
     "prefer-destructuring": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "arrow-parens": ["error", "as-needed"],
+
+    "import/prefer-default-export": "off"
   },
 
-  "extends": "airbnb-base",
   "parser": "typescript-eslint-parser",
-  "env": {
-    "jest/globals": true
-  },
-  "plugins": ["jest"]
+  "plugins": ["jest"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".ts"
+        ]
+      }
+    }
+  }
 }

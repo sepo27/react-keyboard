@@ -6,9 +6,9 @@
   "scripts": {
     "compile": "tsc -p tsconfig.json",
     "compile:publish": "tsc -p tsconfig-publish.json",
-    "lint:base": "eslint -c ./.eslintrc --ext .ts --ext .js src",
-    "lint": "npm run lint:base src",
-    "test": "jest -c jest.config.json src",
+    "lint:base": "eslint -c ./.eslintrc --ext .ts --ext .js",
+    "lint": "npm run lint:base specs src test",
+    "test": "jest -c jest.config.json specs",
     "prepublish": "npm run lint && npm run test && npm run compile:publish"
   },
   "repository": {
@@ -23,10 +23,11 @@
   "homepage": "https://github.com/sepo27/react-keyboard#readme",
   "devDependencies": {
     "@types/jest": "^23.3.11",
+    "@types/react": "^16.8.16",
     "eslint": "^5.11.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
     "husky": "^1.3.1",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.5",

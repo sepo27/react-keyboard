@@ -9,7 +9,7 @@ if [ "$disable" ]; then
 fi
 
 diff() {
-  git diff-index --name-only HEAD
+  git diff-index --name-only --diff-filter=ACMRTUXB HEAD
 }
 
 grepTypes() {
@@ -17,12 +17,14 @@ grepTypes() {
   return $?
 }
 
-# run eslint
 if grepTypes "js|ts"
 then
   echo "=== Running lint"
-  npm run lint:base `diff | grep -P "\.(js|jsx)$"`
-  
+  npm run lint:base `diff | grep -P "\.(ts|js)$"`
+
+  echo "=== Trying to compile dry"
+  npx tsc --project tsconfig.json --noEmit
+
   echo "\n=== Running tests"
   npm run test
 fi
