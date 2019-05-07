@@ -1,6 +1,6 @@
 {
   "name": "@sepo27/react-keyboard",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React key binding handler",
   "main": "lib/index.js",
   "scripts": {
