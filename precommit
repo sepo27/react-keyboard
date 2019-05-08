@@ -23,7 +23,7 @@ then
   npm run lint:base `diff | grep -P "\.(ts|js)$"`
 
   echo "=== Trying to compile dry"
-  npx tsc --project tsconfig.json --noEmit
+  npm run compile:dry
 
   echo "\n=== Running tests"
   npm run test

@@ -2,8 +2,9 @@
 .idea
 *.log
 npm-debug.log*
-.lock
+*.lock
 .env
+*.tgz
 
 # Project
 node_modules

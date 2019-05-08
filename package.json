@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "compile": "tsc -p tsconfig.json",
+    "compile:dry": "tsc -p tsconfig.json --noEmit",
     "compile:publish": "tsc -p tsconfig-publish.json",
     "lint:base": "eslint -c ./.eslintrc --ext .ts --ext .js",
     "lint": "npm run lint:base specs src test",
